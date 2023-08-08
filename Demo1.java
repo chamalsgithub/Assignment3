@@ -161,9 +161,17 @@ public class Demo1{
 
             System.out.printf("Name : %s%s%s%s \n",bold,blue,name.toUpperCase(),r);
             System.out.printf("age : %s Years Old \n", age);
-            System.out.printf("Status : %s%s%s \n",bold,overallGrade,r);
-            
+            System.out.printf("Status : %s%s%s \n",bold,overallGrade,r); ////******************** */
+            System.out.printf("Total : %.2f \t Average : %.2f \n\n", total, avg);
+
+            System.out.println("+-----------------+----------------+--------------+");
+            System.out.println("|-----SUBJECT-----|-----MARKS------|----STATUS----|");
+            System.out.println("+-----------------+----------------+--------------+");
+            System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub1,mark1,sub1Grade);
+            System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub2,mark2,sub2Grade);
+            System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub3,mark3,sub3Grade);
+            System.out.println("+-----------------+----------------+--------------+");
         }
-        System.out.println("---------------------");
+        System.out.println("-------------------PROGRAM END--------------------");
     }
 }
