@@ -20,6 +20,7 @@ public class Demo1{
         final double mark2;
         final String sub3;
         final double mark3;
+        String subPrefix ="SE-";
 
         double total;
         double avg;
@@ -58,7 +59,7 @@ public class Demo1{
             System.out.print(" Enter Subject 1 Code : ");
             sub1 = sc.nextLine();
             
-            if(true){ //******** */
+            if(sub1.startsWith(subPrefix)){
                 System.out.print("Subject 01 added successfully");
             }else {
                 System.out.printf("%s Invalid subject entered %s \n", red, r);
@@ -82,7 +83,7 @@ public class Demo1{
             System.out.print(" Enter Subject 2 Code : ");
             sub2 = sc.nextLine();
             
-            if(true){ //******** */
+            if(sub2.startsWith(subPrefix)){ 
                 System.out.print("Subject 02 added successfully");
             }else {
                 System.out.printf("%s Invalid subject entered %s \n", red, r);
@@ -106,7 +107,7 @@ public class Demo1{
             System.out.print(" Enter Subject 3 Code : ");
             sub3 = sc.nextLine();
             
-            if(true){ //******** */
+            if(sub3.startsWith(subPrefix)){
                 System.out.print("Subject 03 added successfully");
             }else {
                 System.out.printf("%s Invalid subject entered %s \n", red, r);
