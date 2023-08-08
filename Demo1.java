@@ -22,8 +22,8 @@ public class Demo1{
         double mark3;
         String subPrefix ="SE-";
 
-        double total;
-        double avg;
+        double total =0;
+        double avg =0;
 
         String sub1Grade="";
         String sub2Grade="";
@@ -34,7 +34,7 @@ public class Demo1{
         block1 :
         {   Name_Adding : {
             System.out.print(" Enter your name : ");
-            name = sc.nextLine();
+            name = sc.nextLine().strip();
             if(name.length()!=0){
                 System.out.println("Name added successfully");
             }else {
@@ -144,23 +144,23 @@ public class Demo1{
             }else {sub1Grade = String.format("%sF%s", red,r); }
 
             Subject2_Status:
-            if(mark2>=75){sub1Grade = String.format("%sDP%s", blue,r);
-            }else if(mark2>=65){sub1Grade = String.format("%sCP%s", green,r);
-            }else if (mark2>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            if(mark2>=75){sub2Grade = String.format("%sDP%s", blue,r);
+            }else if(mark2>=65){sub2Grade = String.format("%sCP%s", green,r);
+            }else if (mark2>=55){sub2Grade = String.format("%sP%s", yellow,r);
             }else {sub2Grade = String.format("%sF%s", red,r); }
 
             Subject3_Status:
-            if(mark3>=75){sub1Grade = String.format("%sDP%s", blue,r);
-            }else if(mark3>=65){sub1Grade = String.format("%sCP%s", green,r);
-            }else if (mark3>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            if(mark3>=75){sub3Grade = String.format("%sDP%s", blue,r);
+            }else if(mark3>=65){sub3Grade = String.format("%sCP%s", green,r);
+            }else if (mark3>=55){sub3Grade = String.format("%sP%s", yellow,r);
             }else {sub3Grade = String.format("%sF%s", red,r); }
 
             Overall_Status:
-            if(avg>=75){sub1Grade = String.format("%sDP%s", blue,r);
-            }else if(avg>=65){sub1Grade = String.format("%sCP%s", green,r);
-            }else if (avg>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            if(avg>=75){overallGrade = String.format("%sDP%s", blue,r);
+            }else if(avg>=65){overallGrade = String.format("%sCP%s", green,r);
+            }else if (avg>=55){overallGrade = String.format("%sP%s", yellow,r);
             }else {overallGrade = String.format("%sF%s", red,r); }
-          
+           
 
             Print_outputs:
             System.out.println("------------------------------------------------");
@@ -173,9 +173,9 @@ public class Demo1{
             System.out.println("+-----------------+----------------+--------------+");
             System.out.println("|-----SUBJECT-----|-----MARKS------|----STATUS----|");
             System.out.println("+-----------------+----------------+--------------+");
-            System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub1,mark1,sub1Grade);
-            System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub2,mark2,sub2Grade);
-            System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub3,mark3,sub3Grade);
+            System.out.printf("|%s  \t\t|%.2f\t\t|%s\t\t|\n",sub1,mark1,sub1Grade);
+            System.out.printf("|%s  \t\t|%.2f\t\t|%s\t\t|\n",sub2,mark2,sub2Grade);
+            System.out.printf("|%s  \t\t|%.2f\t\t|%s\t\t|\n",sub3,mark3,sub3Grade);
             System.out.println("+-----------------+----------------+--------------+");
         }
         System.out.println("-------------------PROGRAM END---------------------");
