@@ -173,6 +173,6 @@ public class Demo1{
             System.out.printf("|%s\t|%.2f\t|%.2f\t|\n",sub3,mark3,sub3Grade);
             System.out.println("+-----------------+----------------+--------------+");
         }
-        System.out.println("-------------------PROGRAM END--------------------");
+        System.out.println("-------------------PROGRAM END---------------------");
     }
 }
