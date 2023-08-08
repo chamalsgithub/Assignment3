@@ -12,23 +12,23 @@ public class Demo1{
         String r = "\033[0m"; //ANSI escape code for  reset colour text
         String bold = "\033[1m" ; //ANSI escape code for  bold text  ************************
         
-        final String name;
-        final int age;
-        final String sub1;
-        final double mark1;
-        final String sub2;
-        final double mark2;
-        final String sub3;
-        final double mark3;
+        String name;
+        int age;
+        String sub1;
+        double mark1;
+        String sub2;
+        double mark2;
+        String sub3;
+        double mark3;
         String subPrefix ="SE-";
 
         double total;
         double avg;
 
-        String sub1Grade;
-        String sub2Grade;
-        String sub3Grade;
-        String overallGrade;
+        String sub1Grade="";
+        String sub2Grade="";
+        String sub3Grade="";
+        String overallGrade="";
 
 
         block1 :
@@ -36,7 +36,7 @@ public class Demo1{
             System.out.print(" Enter your name : ");
             name = sc.nextLine();
             if(name.length()!=0){
-                System.out.print("Name added successfully");
+                System.out.println("Name added successfully");
             }else {
                 System.out.printf("%s Invalid name entered %s \n" , red, r);
                 break block1;
@@ -47,8 +47,9 @@ public class Demo1{
             Age_Adding : {
             System.out.print(" Enter your age : ");
             age = sc.nextInt();
+            sc.nextLine();
             if(age>=10 && age<= 18){
-                System.out.print("Age added successfully");
+                System.out.println("Age added successfully");
             }else {
                 System.out.printf("%s Invalid age entered %s \n", red, r);
                 break block1;
@@ -60,7 +61,7 @@ public class Demo1{
             sub1 = sc.nextLine();
             
             if(sub1.startsWith(subPrefix)){
-                System.out.print("Subject 01 added successfully");
+                System.out.println("Subject 01 added successfully");
             }else {
                 System.out.printf("%s Invalid subject entered %s \n", red, r);
                 break block1;
@@ -70,9 +71,10 @@ public class Demo1{
             Subect1_marks_Adding : {
             System.out.print(" Enter Subject 1 Marks: ");
             mark1 = sc.nextDouble();
+            sc.nextLine();
             
             if(mark1>=0 && mark1<=100){  
-                System.out.print("Subject 01 marks added successfully");
+                System.out.println("Subject 01 marks added successfully");
             }else {
                 System.out.printf("%s Invalid mark entered %s \n", red, r);
                 break block1;
@@ -84,7 +86,7 @@ public class Demo1{
             sub2 = sc.nextLine();
             
             if(sub2.startsWith(subPrefix)){ 
-                System.out.print("Subject 02 added successfully");
+                System.out.println("Subject 02 added successfully");
             }else {
                 System.out.printf("%s Invalid subject entered %s \n", red, r);
                 break block1;
@@ -94,9 +96,10 @@ public class Demo1{
             Subect2_marks_Adding : {
             System.out.print(" Enter Subject 2 Marks: ");
             mark2 = sc.nextDouble();
+            sc.nextLine();
             
             if(mark2>=0 && mark2<=100){  
-                System.out.print("Subject 02 marks added successfully");
+                System.out.println("Subject 02 marks added successfully");
             }else {
                 System.out.printf("%s Invalid mark entered %s \n", red, r);
                 break block1;
@@ -108,7 +111,7 @@ public class Demo1{
             sub3 = sc.nextLine();
             
             if(sub3.startsWith(subPrefix)){
-                System.out.print("Subject 03 added successfully");
+                System.out.println("Subject 03 added successfully");
             }else {
                 System.out.printf("%s Invalid subject entered %s \n", red, r);
                 break block1;
@@ -118,9 +121,10 @@ public class Demo1{
             Subect3_marks_Adding : {
             System.out.print(" Enter Subject 3 Marks: ");
             mark3 = sc.nextDouble();
+            sc.nextLine();
             
             if(mark3>=0 && mark3<=100){  
-                System.out.print("Subject 03 marks added successfully");
+                System.out.println("Subject 03 marks added successfully");
             }else {
                 System.out.printf("%s Invalid mark entered %s \n", red, r);
                 break block1;
@@ -159,6 +163,7 @@ public class Demo1{
           
 
             Print_outputs:
+            System.out.println("------------------------------------------------");
 
             System.out.printf("Name : %s%s%s%s \n",bold,blue,name.toUpperCase(),r);
             System.out.printf("age : %s Years Old \n", age);
