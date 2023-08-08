@@ -5,9 +5,12 @@ public class Demo1{
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         
-        String red = "\033[31m"; // ANSI escape code for Red colour
-        String r = "\033[0m"; //ANSI escape code for  reset colour
-
+        String red = "\033[31m"; // ANSI escape code for Red colour text
+        String blue = "\033[34m"; //ANSI escape code for  Blue colour text
+        String green = "\033[32m"; //ANSI escape code for  Green colour text
+        String yellow = "\033[33m"; //ANSI escape code for  Yellow colour text
+        String r = "\033[0m"; //ANSI escape code for  reset colour text
+        String bold = "\033[1m" ; //ANSI escape code for  bold text  ************************
         
         final String name;
         final int age;
@@ -24,6 +27,7 @@ public class Demo1{
         String sub1Grade;
         String sub2Grade;
         String sub3Grade;
+        String overallGrade;
 
 
         block1 :
@@ -128,11 +132,36 @@ public class Demo1{
             Find_Average:
             avg=total/3;
 
-            Status:
-            if(mark1>=75){sub1Grade = "DP";
-            }else if(mark1>=65){sub1Grade = "CP";
-            }else if (mark1>=55){sub1Grade = "P";
-            }else {sub1Grade = "F"; }
+            Subject1_Status:
+            if(mark1>=75){sub1Grade = String.format("%sDP%s", blue,r);
+            }else if(mark1>=65){sub1Grade = String.format("%sCP%s", green,r);
+            }else if (mark1>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            }else {sub1Grade = String.format("%sF%s", red,r); }
+
+            Subject2_Status:
+            if(mark2>=75){sub1Grade = String.format("%sDP%s", blue,r);
+            }else if(mark2>=65){sub1Grade = String.format("%sCP%s", green,r);
+            }else if (mark2>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            }else {sub2Grade = String.format("%sF%s", red,r); }
+
+            Subject3_Status:
+            if(mark3>=75){sub1Grade = String.format("%sDP%s", blue,r);
+            }else if(mark3>=65){sub1Grade = String.format("%sCP%s", green,r);
+            }else if (mark3>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            }else {sub3Grade = String.format("%sF%s", red,r); }
+
+            Overall_Status:
+            if(avg>=75){sub1Grade = String.format("%sDP%s", blue,r);
+            }else if(avg>=65){sub1Grade = String.format("%sCP%s", green,r);
+            }else if (avg>=55){sub1Grade = String.format("%sP%s", yellow,r);
+            }else {overallGrade = String.format("%sF%s", red,r); }
+          
+
+            Print_outputs:
+
+            System.out.printf("Name : %s%s%s%s \n",bold,blue,name.toUpperCase(),r);
+            System.out.printf("age : %s Years Old \n", age);
+            System.out.printf("Status : %s%s%s \n",bold,overallGrade,r);
             
         }
         System.out.println("---------------------");
